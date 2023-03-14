@@ -34,16 +34,6 @@ form {
     margin: 0 auto;
 }
 
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #343a40;
-    color: white;
-    text-align: center;
- }
-
 .btn-floating {
     width: 50px;
     height: 50px;
