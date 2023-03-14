@@ -14,25 +14,21 @@
 </head>
 <body>
 	<div class="container">
-        <h2>Calculadora de Campo Elétrico</h2>
-        <form>
-            <div class="form-group">
-                <label for="constante_dielétrica">Constante Dielétrica:</label>
-                <input type="number" class="form-control" id="constante_dielétrica" placeholder="Insira a constante dielétrica">
-            </div>
-            <div class="form-group">
-                <label for="modulo_carga">Módulo da Carga Geradora:</label>
-                <input type="number" class="form-control" id="modulo_carga" placeholder="Insira o módulo da carga geradora">
-            </div>
-            <div class="form-group">
-                <label for="distancia_carga">Distância da Carga ao Ponto:</label>
-                <input type="number" class="form-control" id="distancia_carga" placeholder="Insira a distância da carga ao ponto">
-            </div>
-            <button type="button" class="btn btn-primary" onclick="calcularCampoEletrico()">Calcular</button>
-        </form>
-        <br>
-        <p id="resultado"></p>
-    </div>
+		<h1>Calculadora de Campo Elétrico</h1>
+		<form>
+			<div class="form-group">
+				<label for="carga">Módulo da carga geradora (em Coulombs):</label>
+				<input type="text" class="form-control" id="carga">
+			</div>
+			<div class="form-group">
+				<label for="distancia">Distância da carga ao ponto (em metros):</label>
+				<input type="text" class="form-control" id="distancia">
+			</div>
+			<button type="button" class="btn btn-primary" onclick="calcularCampo()">Calcular</button>
+		</form>
+		<br>
+		<p id="resultado"></p>
+	</div>
 
     <!-- Calculo do código -->
     <script src="./js/main.js"></script>
