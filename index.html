@@ -5,27 +5,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Css da página -->
+    <link rel="stylesheet" href="./css/style.css">
+
 	<!-- Importando o Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-		crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
-	<div class="container my-5">
-		<h1 class="text-center mb-4">Calculadora do Campo Elétrico Gerado por uma Carga Puntiforme</h1>
-		<form class="mb-4">
-			<div class="form-group">
-				<label for="q">Carga (C):</label>
-				<input type="number" class="form-control" id="q" name="q" value="1">
-			</div>
-			<div class="form-group">
-				<label for="r">Distância (m):</label>
-				<input type="number" class="form-control" id="r" name="r" value="1">
-			</div>
-			<button type="button" class="btn btn-primary" onclick="calcularCampo()">Calcular</button>
-		</form>
-		<p id="resultado"></p>
-	</div>
+	<div class="container">
+        <h2>Calculadora de Campo Elétrico</h2>
+        <form>
+            <div class="form-group">
+                <label for="constante_dielétrica">Constante Dielétrica:</label>
+                <input type="number" class="form-control" id="constante_dielétrica" placeholder="Insira a constante dielétrica">
+            </div>
+            <div class="form-group">
+                <label for="modulo_carga">Módulo da Carga Geradora:</label>
+                <input type="number" class="form-control" id="modulo_carga" placeholder="Insira o módulo da carga geradora">
+            </div>
+            <div class="form-group">
+                <label for="distancia_carga">Distância da Carga ao Ponto:</label>
+                <input type="number" class="form-control" id="distancia_carga" placeholder="Insira a distância da carga ao ponto">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calcularCampoEletrico()">Calcular</button>
+        </form>
+        <br>
+        <p id="resultado"></p>
+    </div>
 
     <!-- Calculo do código -->
     <script src="./js/main.js"></script>

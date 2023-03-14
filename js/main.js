@@ -1,7 +1,13 @@
-function calcularCampo() {
-    var k = 8.99 * Math.pow(10, 9); // constante eletrostática em N.m²/C²
-    var q = document.getElementById("q").value;
-    var r = document.getElementById("r").value;
-    var campo = k * q / (r * r);
-    document.getElementById("resultado").innerHTML = "Campo Elétrico = " + campo.toFixed(2) + " N/C";
+function calcularCampoEletrico() {
+    // Obtem os valores dos campos
+    const epsilon = parseFloat(document.getElementById("constante_dielétrica").value);
+    const q = parseFloat(document.getElementById("modulo_carga").value);
+    const r = parseFloat(document.getElementById("distancia_carga").value);
+    
+    // Calcula o campo elétrico
+    const k = 9e9; // Constante de Coulomb
+    const e = k * q / (epsilon * r * r);
+    
+    // Exibe o resultado
+    document.getElementById("resultado").innerHTML = "O campo elétrico é " + e.toExponential(2) + " N/C";
 }
