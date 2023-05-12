@@ -1,80 +1,97 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <link rel="shotcut icon" href="./img/calculadora.png" type="image/x-icon" />
+    <title>Calculadora do Campo Elétrico Gerado por uma Carga Puntiforme</title>
 
-	<!-- Título da página -->
-	<link rel="shotcut icon" href="./img/calculadora.png" type="image/x-icon" />
-	<title>Calculadora do Campo Elétrico Gerado por uma Carga Puntiforme</title>
+    <!-- Css da página -->
+    <link rel="stylesheet" href="./css/style.css" />
 
-	<!-- Css da página -->
-	<link rel="stylesheet" href="./css/style.css">
+    <!-- Importando o Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
 
-	<!-- Importando o Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <body>
+    <div class="container">
+      <div class="mb-3">
+        <h1>
+          <lord-icon
+            src="https://cdn.lordicon.com/dxoycpzg.json"
+            trigger="loop"
+            delay="1000"
+            style="width: 85px; height: 85px"
+          >
+          </lord-icon>
+          Calculadora de <span id="element"></span>
+        </h1>
+      </div>
+      <form>
+        <div class="form-group">
+          <label for="carga">Módulo da carga geradora (em Coulombs):</label>
+          <input type="text" class="form-control" id="carga" />
+        </div>
+        <div class="form-group">
+          <label for="distancia"
+            >Distância da carga ao ponto (em metros):</label
+          >
+          <input type="text" class="form-control" id="distancia" />
+        </div>
+        <button type="button" class="btn btn-primary" onclick="calcularCampo()">
+          Calcular
+        </button>
+      </form>
+      <br />
+      <p id="resultado"></p>
+    </div>
 
-</head>
+    <footer class="mt-5 py-5">
+      <div class="container">
+        <div class="footer-copyright text-center mt-3 mt-lg-2">
+          <lord-icon
+            src="https://cdn.lordicon.com/flvisirw.json"
+            trigger="loop"
+            delay="1000"
+            style="width: 85px; height: 85px"
+          >
+          </lord-icon>
+          <h5>
+            Copyright 2023 Mert | Feito por Adiel Trani, Lavínia Machado, Júlia
+            Lopes, Maria Eduarda Lopes, Rebeca Freire, Vinícius Raniery
+          </h5>
+        </div>
+      </div>
+    </footer>
 
-<body>
+    <!-- Calculo do código -->
+    <script src="./js/main.js"></script>
 
-
-
-	<div class="container">
-		<h1><lord-icon src="https://cdn.lordicon.com/dxoycpzg.json" trigger="loop" delay="1000"
-				style="width:85px;height:85px">
-			</lord-icon> Calculadora de <span id="element"></span></h1>
-		<br>
-		<form>
-			<div class="form-group">
-				<label for="carga">Módulo da carga geradora (em Coulombs):</label>
-				<input type="text" class="form-control" id="carga">
-			</div>
-			<div class="form-group">
-				<label for="distancia">Distância da carga ao ponto (em metros):</label>
-				<input type="text" class="form-control" id="distancia">
-			</div>
-			<button type="button" class="btn btn-primary" onclick="calcularCampo()">Calcular</button>
-		</form>
-		<br>
-		<p id="resultado"></p>
-	</div>
-
-
-
-	<footer class="mt-5 py-5">
-		<div class="container">
-			<div class="footer-copyright text-center mt-3 mt-lg-2">
-				<lord-icon src="https://cdn.lordicon.com/flvisirw.json" trigger="loop" delay="1000"
-					style="width:85px;height:85px">
-				</lord-icon>
-				<h5>Copyright 2023 Mert | Feito por Adiel Trani, Lavínia Machado, Júlia Lopes, Maria Eduarda Lopes,
-					Rebeca Freire, Vinícius Raniery</h5>
-			</div>
-		</div>
-	</footer>
-
-
-
-	<!-- Calculo do código -->
-	<script src="./js/main.js"></script>
-
-	<!-- Importando o Bootstrap JS -->
-	<script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
-	<script src="./js/typed.js"></script>
-
-</body>
-
+    <!-- Importando o Bootstrap JS -->
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script src="./js/typed.js"></script>
+  </body>
 </html>
